@@ -22,7 +22,12 @@ export default {
   <img
       width="200"
       height="200"
+      source = "https://countryflagsapi.com/png/${code}"
     />
+    <h1>{{name}}</h1>
+    <h2>Capital: {{capital}}</h2>
+    <h3>Moneda: {{currency_name}}({{currency}})</h3>
+    <h3>Región: {{region}}</h3>
   </div>
 </template>
 

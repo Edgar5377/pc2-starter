@@ -20,9 +20,14 @@ export default {
   methods: {
     setCapital(e) {
       //TODO: implementar. fija la capital del input.
+      this.capital = e;
     },
     adivinarCapital() {
       //TODO: implementar. verifica se la adivinanza es correcta.
+      if (this.country.capital == this.country["capital"]){
+        this.puntaje = this.puntaje + 1;
+      }
+
     },
   },
 };
@@ -38,6 +43,16 @@ export default {
     <button @click="adivinarCapital">Adivina!</button>
     <div class="countries-container">
       <!--TODO: CREAR EL COMPONENTE PARA VISUALIZAR EL PAIS-->
+      <img
+      width="200"
+      height="200"
+      source = "https://countryflagsapi.com/png/${'country.currency'}">
+      <h1>{{country.name}}</h1>
+      <h2>Capital: {{country.capital}}</h2>
+      <h3>Moneda: {{country.currency_name}}({{country.currency}})</h3>
+      <h3>Región: {{country.region}}</h3>
+      <h3>Capitalprueba: {{capital}}</h3>
+
     </div>
   </div>
 </template>
